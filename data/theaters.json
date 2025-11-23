@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "name": "Zhovten Сinema",
+        "capacity": 20
+    },
+    {
+        "id": 2,
+        "name": "Multiplex Lavina Mall",
+        "capacity": 20
+    },
+    {
+        "id": 3,
+        "name": "IMAX Cinema Planet",
+        "capacity": 30
+    }
+]

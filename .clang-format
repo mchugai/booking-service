@@ -1,0 +1,136 @@
+# BASE
+BasedOnStyle: LLVM
+UseTab: Never
+IndentWidth: 4
+TabWidth: 4
+ColumnLimit: 120
+BreakBeforeBinaryOperators: None
+
+# BRACES
+InsertBraces: true
+BreakBeforeBraces: Custom
+BraceWrapping:
+  AfterCaseLabel: true
+  AfterClass: false
+  AfterControlStatement: Never
+  AfterEnum: false
+  AfterFunction: false
+  AfterNamespace: false
+  AfterObjCDeclaration: false
+  AfterStruct: false
+  AfterUnion: false
+  AfterExternBlock: false
+  BeforeCatch: true
+  BeforeElse: true
+  IndentBraces: false
+  SplitEmptyFunction: false
+  SplitEmptyRecord: false
+  SplitEmptyNamespace: false
+Cpp11BracedListStyle: true
+SpaceBeforeCpp11BracedList: false
+
+# CONSTRUCTOR
+AccessModifierOffset: -4
+ConstructorInitializerIndentWidth: 4
+BreakConstructorInitializers: BeforeComma
+PackConstructorInitializers: Never
+SpaceBeforeCtorInitializerColon: true
+SpaceBeforeInheritanceColon: true
+
+# ARGUMENTS
+AllowAllArgumentsOnNextLine: false
+AllowAllParametersOfDeclarationOnNextLine: false
+BinPackArguments: false
+BinPackParameters: OnePerLine
+AlignAfterOpenBracket: Align
+
+# FUNCTION
+IndentWrappedFunctionNames: false
+SpaceBeforeParens: ControlStatements
+AllowShortFunctionsOnASingleLine: InlineOnly
+AlwaysBreakAfterDefinitionReturnType: None
+AlwaysBreakAfterReturnType: None
+PenaltyReturnTypeOnItsOwnLine: 1000
+
+# POINTER & REFERENCE
+DerivePointerAlignment: false
+PointerAlignment: Left
+
+# QUALIFIER ORDER
+QualifierAlignment: Custom
+QualifierOrder:
+  - static
+  - inline
+  - const
+  - type
+
+# WHITESPACE
+SpaceAfterCStyleCast: false
+SpacesBeforeTrailingComments: 2
+SpaceInEmptyParentheses: false
+SpaceBeforeAssignmentOperators: true
+SpacesInAngles: Never
+SpacesInParens: Custom
+SpacesInParensOptions:
+  ExceptDoubleParentheses: false
+  InConditionalStatements: false
+  InCStyleCasts: false
+  InEmptyParentheses: false
+  Other: false
+SpacesInContainerLiterals: false
+SpacesInSquareBrackets: false
+IndentCaseLabels: false
+SeparateDefinitionBlocks: Leave
+SpaceInEmptyBlock: true
+SpacesInLineCommentPrefix:
+  Minimum: 1
+  Maximum: -1
+InsertNewlineAtEOF: true
+AlwaysBreakTemplateDeclarations: Yes
+BitFieldColonSpacing: After
+PenaltyBreakAssignment: 100
+
+# NAMESPACE
+NamespaceIndentation: None
+AllowShortNamespacesOnASingleLine: false
+CompactNamespaces: false
+FixNamespaceComments: true
+WrapNamespaceBodyWithEmptyLines: Always
+
+# SHORT FORMS
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortBlocksOnASingleLine: Always
+AllowShortEnumsOnASingleLine: false
+AllowShortLambdasOnASingleLine: Inline
+AllowShortLoopsOnASingleLine: false
+
+# COMMON ALIGNMENTS
+AlignConsecutiveAssignments: false
+AlignConsecutiveDeclarations: false
+AlignTrailingComments: true
+
+# USING
+SortUsingDeclarations: true
+
+# INCLUDES
+SortIncludes: false
+IncludeBlocks: Regroup
+IncludeCategories:
+  # C++ Standard Library
+  - Regex: '^<[a-zA-Z_]+>'
+    Priority: 1
+  # Project headers
+  - Regex: '^("((\.\.|[a-zA-Z0-9_\-]+)/)*[a-zA-Z0-9_\-]+\.(h|hpp|hh|hxx)")|(<((CoreML|mipl)/|(ml|mipl)_)([a-zA-Z0-9_\-]+/)*[a-zA-Z0-9_\-]+\.(h|hpp|hh|hxx)>)'
+    Priority: 2
+    SortPriority: 4
+  # Platform-specific
+  - Regex: '^<(objc/)?[a-zA-Z0-9_\-]+\.(h|hpp|hh|hxx)>'
+    Priority: 3
+    SortPriority: 3
+  # Third-party
+  - Regex: '^<([a-zA-Z0-9_\-\+]+/)*[a-zA-Z0-9_\-\+]+\.(h|hpp|hh|hxx)>'
+    Priority: 4
+    SortPriority: 2
+
+# OTHERS
+InsertTrailingCommas: Wrapped

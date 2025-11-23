@@ -1,0 +1,6 @@
+PROJECT_NAME           = "Booking Service"
+OUTPUT_DIRECTORY       = docs
+INPUT                  = include
+RECURSIVE              = YES
+GENERATE_HTML          = YES
+GENERATE_LATEX         = NO
