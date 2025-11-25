@@ -99,7 +99,7 @@ TEST_F(BookingServiceTest, GetTheaterValid) {
     auto theater = store->GetTheater(1);
     ASSERT_TRUE(theater.has_value());
     EXPECT_EQ(theater->id, 1);
-    EXPECT_EQ(theater->name, "Cinema City");
+    EXPECT_EQ(theater->name, "Zhovten Cinema");
 }
 
 TEST_F(BookingServiceTest, GetTheaterInvalid) {
